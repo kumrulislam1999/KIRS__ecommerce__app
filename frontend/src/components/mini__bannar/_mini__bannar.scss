@@ -1,0 +1,47 @@
+#minibannar__section{
+    
+    .content__bg{
+        @include display__flex($a__items:center,$j__content:center);
+        position: relative;
+        width: 100% !important;
+        height: 100%;
+        z-index: 1;
+        &::after{
+            @include after__before($bg__color:rgba($black__color,0.5),$inset:100%,$z__index:1);
+            transition: 0.4s;
+        }
+        .text__content{
+            position: absolute;
+            text-align: center;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            z-index: 2;
+            transform: translate(-50%, -50%) ;
+            h3{
+                @include heading__3($color:$white__color,$margin: 0 0 15px);
+                &:hover{
+                    @include hover($color:$teal__color);
+                }
+            }
+            .shop__btn{
+                @include btn__lg($bg__color:$white__color,$color:$teal__color,$b__color:$white__color);
+                &:hover{
+                    @include hover($color:$white__color,$bg__color:$teal__color);
+                    border-color: $teal__color;
+                }
+            }
+        }
+        img{
+            width: 100% !important;
+            height: 100% !important;
+        }
+
+        &:hover{
+            
+            &::after{
+                inset: 20px;
+            }
+        }
+    }
+}

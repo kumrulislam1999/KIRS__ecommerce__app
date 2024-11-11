@@ -1,0 +1,58 @@
+#wishlist__page{
+    #wishlisth__section{
+        h3{
+            @include heading__3($margin:0 0 25px);
+        }
+        #search__box{
+            border: 1px solid $teal__color;
+            @include display__flex($a__items:center,$j__content: space-between);
+            padding: 2px;
+            margin-bottom:30px ;
+            input{
+                @include paragraph($color:$heading__color,);
+                padding: 5px 25px;
+                height: 100%;
+                width: 100%;
+                height: 36px;
+                border-color: $teal__color;
+            }
+            .search__btn{
+                @include icon__sm($b__color:$teal__color,$width:36px,$height:36px,$color:$teal__color,$bg__color:$white__color,$f__weight:800,$f__size:25px);
+                &:hover{
+                    @include hover($bg__color:$teal__color,$color:$white__color);
+                }
+            }
+        }
+
+        #social__media__box{
+            margin-top: 30px;
+            @include display__flex($a__items:center,$j__content:end);
+            gap: 10px;
+            flex-wrap: wrap;
+            p{
+                @include paragraph($f__weight:500,$color:$heading__color)
+            }
+            .social__media{
+                @include display__flex($j__content:center,$a__items:center);
+                flex-wrap: wrap;
+                gap: 5px;
+                .social__item{
+                    @include icon__lg($bg__color:transparent,$color:$teal__color,$b__color:$teal__color);
+                    &:hover{
+                        @include hover($color:$white__color,$bg__color:$teal__color);
+                    }
+                }
+            }
+
+            /* ======== Device Responsive Here ========= */
+            @include device__sm{
+                margin-top: 20px;
+                justify-content: center;
+            }
+            @include device__xsm{
+                margin-top: 20px;
+                justify-content: center;
+            }
+        }
+    }
+}

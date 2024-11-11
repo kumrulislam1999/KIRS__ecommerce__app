@@ -1,0 +1,1358 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+
+/* ===================================
+    Start Common Variable Here
+==================================== */
+$white__color: #ffffff;
+$black__color: #000000;
+$orange__color: #fc7404f3;
+$green__color: #21b844;
+$teal__color: #03918a;
+$blue__color: #1776db;
+$red__color: #dc3545;
+$yellow__color: #ffc107;
+$delivered__color:#06d6a0;
+$pending__color: #ffba18;
+$cancelled__color: #ef476f;
+$returns__color: #342bb6;
+$pickups__color: #1d78ff;
+$progress__color: #091d5e;
+
+$paragraph__color: #5a5a5a;
+$heading__color: #0e0e13;
+$h__font : "Open Sans", sans-serif;;
+$b__font : "Roboto", sans-serif;;
+
+
+/* ===================================
+    End Common Variable Here
+==================================== */
+
+
+
+/* ===================================
+    Start Responsive Mixin Here
+==================================== */
+@mixin device__xxl{
+    @media (min-width: 1400px) {
+        @content;
+    }
+}
+@mixin device__xl{
+    @media (min-width: 1200px) and (max-width: 1399.98px) {
+        @content;
+    }
+}
+
+@mixin device__lg{
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+        @content;
+    }
+}
+
+@mixin device__md{
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        @content;
+    }
+}
+
+@mixin device__sm{
+    @media (min-width: 576px) and (max-width: 767.98px) {
+        @content;
+    }
+}
+
+@mixin device__xsm{
+    @media (max-width: 575.98px) {
+        @content;
+    }
+}
+/* ===================================
+    End Responsive Mixin Here
+==================================== */
+
+/* ===================================
+    Start Padding & Margin Here
+==================================== */
+/* ==== Margin Top ===== */
+.mar__12{
+    margin: 12px;
+}
+.mar__24{
+    margin: 24px;
+}
+.mar__36{
+    margin: 36px;
+}
+.mar__50{
+    margin: 50px;
+}
+.marx__12{
+    margin: 0 12px;
+}
+.marx__50{
+    margin: 0px 50px;
+}
+.marx__100{
+    margin: 0 100px;
+}
+.mary__12{
+    margin: 12px 0px;
+}
+.mary__50{
+    margin: 50px 0px;
+}
+.mary__100{
+    margin: 100px 0px;
+}
+
+.sec__mar{
+    margin: 120px 0;
+
+    /* ====== Responsive section Space ====== */
+    @include device__xxl{
+        margin: 110px 0;
+    }
+    @include device__xl{
+        margin: 100px 0;
+    }
+    @include device__lg{
+        margin: 90px 0;
+    }
+    @include device__md{
+        margin: 80px 0;
+    }
+    @include device__sm{
+        margin: 70px 0;
+    }
+    @include device__xsm{
+        margin: 60px 0;
+    }
+}
+
+
+.mart__12{
+    padding-top: 12px;
+}
+.marb__12{
+    padding-bottom: 12px;
+}
+.mart__24{
+    padding-top: 24px;
+}
+.marb__24{
+    padding-bottom: 24px;
+}
+.mart__36{
+    padding-top: 36px;
+}
+.marb__36{
+    padding-bottom: 36px;
+}
+
+.marl__12{
+    padding-left: 12px;
+}
+.marr__12{
+    padding-right: 12px;
+}
+.marl__24{
+    padding-left: 24px;
+}
+.marr__24{
+    padding-right: 24px;
+}
+.marl__36{
+    padding-left: 36px;
+}
+.marr__36{
+    padding-right: 36px;
+}
+
+/* ===== Responsive Margin ====== */
+/* === Margin Top === */
+
+
+/* === Lg Device === */
+.mtlg__12{
+    @include device__lg{
+        margin-top: 12px ;
+    }
+}
+.mtlg__24{
+    @include device__lg{
+        margin-top: 24px;
+    }
+}
+.mtlg__36{
+    @include device__lg{   
+        margin-top: 36px ;
+    }
+}
+
+.mblg__12{
+    @include device__lg{
+        margin-bottom: 12px ;
+    }
+}
+.mblg__24{
+    @include device__lg{
+        margin-bottom: 24px;
+    }
+}
+.mblg__36{
+    @include device__lg{
+        margin-bottom: 36px ;
+    }
+}
+
+
+
+/* === Device MD === */
+.mtmd__12{
+    @include device__md{
+        margin-top: 12px ;
+    }
+}
+.mtmd__24{
+    @include device__md{
+        margin-top: 24px;
+    }
+}
+.mtmd__36{
+    @include device__md{   
+        margin-top: 36px ;
+    }
+}
+
+.mbmd__12{
+    @include device__md{
+        margin-bottom: 12px ;
+    }
+}
+.mbmd__24{
+    @include device__md{
+        margin-bottom: 24px;
+    }
+}
+.mbmd__36{
+    @include device__md{
+        margin-bottom: 36px ;
+    }
+}
+
+
+
+
+/* === Device SM === */
+.mtsm__12{
+    @include device__sm{
+        margin-top: 12px ;
+    }
+}
+.mtsm__24{
+    @include device__sm{
+        margin-top: 24px;
+    }
+}
+.mtsm__36{
+    @include device__sm{   
+        margin-top: 36px ;
+    }
+}
+
+.mbsm__12{
+    @include device__sm{
+        margin-bottom: 12px ;
+    }
+}
+.mbsm__24{
+    @include device__sm{
+        margin-bottom: 24px;
+    }
+}
+.mbsm__36{
+    @include device__sm{
+        margin-bottom: 36px ;
+    }
+}
+
+
+
+
+/* === Device XSM === */
+.mtxsm__12{
+    @include device__xsm{
+        margin-top: 12px ;
+    }
+}
+.mtxsm__24{
+    @include device__xsm{
+        margin-top: 24px;
+    }
+}
+.mtxsm__36{
+    @include device__xsm{   
+        margin-top: 36px ;
+    }
+}
+
+.mbxsm__12{
+    @include device__xsm{
+        margin-bottom: 12px ;
+    }
+}
+.mbxsm__24{
+    @include device__xsm{
+        margin-bottom: 24px;
+    }
+}
+.mbxsm__36{
+    @include device__xsm{
+        margin-bottom: 36px ;
+    }
+}
+
+
+/* == Left Right == */
+/* === Lg Device === */
+.mllg__12{
+    @include device__lg{
+        margin-left: 12px ;
+    }
+}
+.mllg__24{
+    @include device__lg{
+        margin-left: 24px;
+    }
+}
+.mllg__36{
+    @include device__lg{   
+        margin-left: 36px ;
+    }
+}
+
+.mrlg__12{
+    @include device__lg{
+        margin-right: 12px ;
+    }
+}
+.mrlg__24{
+    @include device__lg{
+        margin-right: 24px;
+    }
+}
+.mrlg__36{
+    @include device__lg{
+        margin-right: 36px ;
+    }
+}
+
+/* === Device MD === */
+.mlmd__12{
+    @include device__md{
+        margin-left: 12px ;
+    }
+}
+.mlmd__24{
+    @include device__md{
+        margin-left: 24px;
+    }
+}
+.mlmd__36{
+    @include device__md{   
+        margin-left: 36px ;
+    }
+}
+
+.mrmd__12{
+    @include device__md{
+        margin-right: 12px ;
+    }
+}
+.mrmd__24{
+    @include device__md{
+        margin-right: 24px;
+    }
+}
+.mrmd__36{
+    @include device__md{
+        margin-right: 36px ;
+    }
+}
+
+
+/* === Device SM === */
+.mlsm__12{
+    @include device__sm{
+        margin-left: 12px ;
+    }
+}
+.mlsm__24{
+    @include device__sm{
+        margin-left: 24px;
+    }
+}
+.mlsm__36{
+    @include device__sm{   
+        margin-left: 36px ;
+    }
+}
+
+.mrsm__12{
+    @include device__sm{
+        margin-right: 12px ;
+    }
+}
+.mrsm__24{
+    @include device__sm{
+        margin-right: 24px;
+    }
+}
+.mrsm__36{
+    @include device__sm{
+        margin-right: 36px ;
+    }
+}
+
+
+/* === Device XSM === */
+.mlxsm__12{
+    @include device__xsm{
+        margin-left: 12px ;
+    }
+}
+.mlxsm__24{
+    @include device__xsm{
+        margin-left: 24px;
+    }
+}
+.mlxsm__36{
+    @include device__xsm{   
+        margin-left: 36px ;
+    }
+}
+
+.mrxsm__12{
+    @include device__xsm{
+        margin-right: 12px ;
+    }
+}
+.mrxsm__24{
+    @include device__xsm{
+        margin-right: 24px;
+    }
+}
+.mrxsm__36{
+    @include device__xsm{
+        margin-right: 36px ;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* ===== Padding ===== */
+
+.pad__12{
+    padding: 12px;
+}
+.pad__24{
+    padding: 24px;
+}
+.pad_36{
+    padding: 36px;
+}
+.pad__100{
+    padding: 100px;
+    /* ====== Responsive section Space ====== */
+    @include device__xxl{
+        padding: 90px 80px;
+    }
+    @include device__xl{
+        padding: 80px 60px;
+    }
+    @include device__lg{
+        padding: 70px 50px;
+    }
+    @include device__md{
+        padding: 60px 40px;
+    }
+    @include device__sm{
+        padding: 50px 30px;
+    }
+    @include device__xsm{
+        padding: 50px 20px;
+    }
+      
+}
+
+.pad__50{
+    padding: 50px;
+    /* ====== Responsive section Space ====== */
+    @include device__xxl{
+        padding: 45px;
+    }
+    @include device__xl{
+        padding: 40px;
+    }
+    @include device__lg{
+        padding: 35px;
+    }
+    @include device__md{
+        padding: 30px;
+    }
+    @include device__sm{
+        padding: 25px;
+    }
+    @include device__xsm{
+        padding: 20px;
+    }
+      
+}
+
+
+.padx__12{
+    padding: 12px;
+
+}
+.padx__50{
+    padding: 50px 0;
+}
+.padx__100{
+    padding: 100px 0;
+}
+.pady__50{
+    padding: 0 50px ;
+}
+.pady__100{
+    padding: 0 100px ;
+}
+
+.sec__pad{
+    padding: 110px 0;
+
+    /* ====== Responsive section Space ====== */
+    @include device__xxl{
+        padding: 100px 0;
+    }
+    @include device__xl{
+        padding: 90px 0;
+    }
+    @include device__lg{
+        padding: 80px 0;
+    }
+    @include device__md{
+        padding: 70px 0;
+    }
+    @include device__sm{
+        padding: 60px 0;
+    }
+    @include device__xsm{
+        padding: 50px 0;
+    }
+}
+
+.padt__12{
+    padding-top: 12px;
+}
+.padb__12{
+    padding-bottom: 12px;
+}
+.padt__24{
+    padding-top: 24px;
+}
+.padb__24{
+    padding-bottom: 24px;
+}
+.padt__36{
+    padding-top: 36px;
+}
+.padb__36{
+    padding-bottom: 36px;
+}
+
+.padl__12{
+    padding-left: 12px;
+}
+.padr__12{
+    padding-right: 12px;
+}
+.padl__24{
+    padding-left: 24px;
+}
+.padr__24{
+    padding-right: 24px;
+}
+.padl__36{
+    padding-left: 36px;
+}
+.padr__36{
+    padding-right: 36px;
+}
+
+
+/* ===== Responsvie Padding ===== */
+/* === Margin Top === */
+
+
+/* === Lg Device === */
+.ptlg__12{
+    @include device__lg{
+        padding-top: 12px ;
+    }
+}
+.ptlg__24{
+    @include device__lg{
+        padding-top: 24px;
+    }
+}
+.ptlg__36{
+    @include device__lg{   
+        padding-top: 36px ;
+    }
+}
+
+.pblg__12{
+    @include device__lg{
+        padding-bottom: 12px ;
+    }
+}
+.pblg__24{
+    @include device__lg{
+        padding-bottom: 24px;
+    }
+}
+.pblg__36{
+    @include device__lg{
+        padding-bottom: 36px ;
+    }
+}
+
+
+
+/* === Device MD === */
+.ptmd__12{
+    @include device__md{
+        padding-top: 12px ;
+    }
+}
+.ptmd__24{
+    @include device__md{
+        padding-top: 24px;
+    }
+}
+.ptmd__36{
+    @include device__md{   
+        padding-top: 36px ;
+    }
+}
+
+.pbmd__12{
+    @include device__md{
+        padding-bottom: 12px ;
+    }
+}
+.pbmd__24{
+    @include device__md{
+        padding-bottom: 24px;
+    }
+}
+.pbmd__36{
+    @include device__md{
+        padding-bottom: 36px ;
+    }
+}
+
+
+
+
+/* === Device SM === */
+.ptsm__12{
+    @include device__sm{
+        padding-top: 12px ;
+    }
+}
+.ptsm__24{
+    @include device__sm{
+        padding-top: 24px;
+    }
+}
+.ptsm__36{
+    @include device__sm{   
+        padding-top: 36px ;
+    }
+}
+
+.pbsm__12{
+    @include device__sm{
+        padding-bottom: 12px ;
+    }
+}
+.pbsm__24{
+    @include device__sm{
+        padding-bottom: 24px;
+    }
+}
+.pbsm__36{
+    @include device__sm{
+        padding-bottom: 36px ;
+    }
+}
+
+
+
+
+/* === Device XSM === */
+.ptxsm__12{
+    @include device__xsm{
+        padding-top: 12px ;
+    }
+}
+.ptxsm__24{
+    @include device__xsm{
+        padding-top: 24px;
+    }
+}
+.ptxsm__36{
+    @include device__xsm{   
+        padding-top: 36px ;
+    }
+}
+
+.pbxsm__12{
+    @include device__xsm{
+        padding-bottom: 12px ;
+    }
+}
+.pbxsm__24{
+    @include device__xsm{
+        padding-bottom: 24px;
+    }
+}
+.pbxsm__36{
+    @include device__xsm{
+        padding-bottom: 36px ;
+    }
+}
+
+
+/* == Left Right == */
+/* === Lg Device === */
+.pllg__12{
+    @include device__lg{
+        padding-left: 12px ;
+    }
+}
+.pllg__24{
+    @include device__lg{
+        padding-left: 24px;
+    }
+}
+.pllg__36{
+    @include device__lg{   
+        padding-left: 36px ;
+    }
+}
+
+.prlg__12{
+    @include device__lg{
+        padding-right: 12px ;
+    }
+}
+.prlg__24{
+    @include device__lg{
+        padding-right: 24px;
+    }
+}
+.prlg__36{
+    @include device__lg{
+        padding-right: 36px ;
+    }
+}
+
+/* === Device MD === */
+.plmd__12{
+    @include device__md{
+        padding-left: 12px ;
+    }
+}
+.plmd__24{
+    @include device__md{
+        padding-left: 24px;
+    }
+}
+.plmd__36{
+    @include device__md{   
+        padding-left: 36px ;
+    }
+}
+
+.prmd__12{
+    @include device__md{
+        padding-right: 12px ;
+    }
+}
+.prmd__24{
+    @include device__md{
+        padding-right: 24px;
+    }
+}
+.prmd__36{
+    @include device__md{
+        padding-right: 36px ;
+    }
+}
+
+
+/* === Device SM === */
+.plsm__12{
+    @include device__sm{
+        padding-left: 12px ;
+    }
+}
+.plsm__24{
+    @include device__sm{
+        padding-left: 24px;
+    }
+}
+.plsm__36{
+    @include device__sm{   
+        padding-left: 36px ;
+    }
+}
+
+.prsm__12{
+    @include device__sm{
+        padding-right: 12px ;
+    }
+}
+.prsm__24{
+    @include device__sm{
+        padding-right: 24px;
+    }
+}
+.prsm__36{
+    @include device__sm{
+        padding-right: 36px ;
+    }
+}
+
+
+/* === Device XSM === */
+.plxsm__12{
+    @include device__xsm{
+        padding-left: 12px ;
+    }
+}
+.plxsm__24{
+    @include device__xsm{
+        padding-left: 24px;
+    }
+}
+.plxsm__36{
+    @include device__xsm{   
+        padding-left: 36px ;
+    }
+}
+
+.prxsm__12{
+    @include device__xsm{
+        padding-right: 12px ;
+    }
+}
+.prxsm__24{
+    @include device__xsm{
+        padding-right: 24px;
+    }
+}
+.prxsm__36{
+    @include device__xsm{
+        padding-right: 36px ;
+    }
+}
+
+/* ===================================
+    End Padding & Margin Here
+==================================== */
+
+
+
+
+/* ===================================
+    Start heading Maxin Here
+==================================== */
+@mixin heading__1($f__size: 60px,$f__weight:800,$l__height: 70px,$color: $heading__color,$padding: 0,$margin:0,$f__family: $h__font){
+font-size: $f__size;
+font-weight: $f__weight;
+line-height: $l__height;
+color: $color;
+padding: $padding;
+margin: $margin;
+font-family: $f__family;
+
+
+/* ====== Responsive Devices ====== */
+
+@include device__xl{
+    font-size: 55px ;
+    line-height: 65px;
+}
+@include device__lg{
+    font-size: 50px ;
+    line-height: 60px;
+}
+@include device__md{
+    font-size: 45px ;
+    line-height: 55px;
+}
+@include device__sm{
+    font-size: 40px ;
+    line-height: 50px;
+}
+@include device__xsm{
+    font-size: 35px ;
+    line-height: 45px;
+}
+
+}
+@mixin heading__2($f__size: 55px,$f__weight:800,$l__height: 65px,$color: $white__color,$padding: 0,$margin:0,$f__family: $h__font){
+    font-size: $f__size;
+    font-weight: $f__weight;
+    line-height: $l__height;
+    color: $color;
+    padding: $padding;
+    margin: $margin;
+    font-family: $f__family;
+    
+    
+    /* ====== Responsive Devices ====== */
+    
+    @include device__xl{
+        font-size:51px ;
+        line-height: 61px;
+    }
+    @include device__lg{
+        font-size: 47px ;
+        line-height: 57px;
+    }
+    @include device__md{
+        font-size: 43px ;
+        line-height: 53px;
+    }
+    @include device__sm{
+        font-size: 39px ;
+        line-height: 49px;
+    }
+    @include device__xsm{
+        font-size: 35px ;
+        line-height: 45px;
+    }
+    
+}
+@mixin heading__3($f__size: 40px,$f__weight:800,$l__height: 50px,$color: $heading__color,$padding: 0,$margin:0,$f__family: $h__font){
+    font-size: $f__size;
+    font-weight: $f__weight;
+    line-height: $l__height;
+    color: $color;
+    padding: $padding;
+    margin: $margin;
+    font-family: $f__family;
+    
+    
+    /* ====== Responsive Devices ====== */
+    
+    @include device__xl{
+        font-size:36px ;
+        line-height: 47px;
+    }
+    @include device__lg{
+        font-size: 32px ;
+        line-height: 44px;
+    }
+    @include device__md{
+        font-size: 29px ;
+        line-height: 41px;
+    }
+    @include device__sm{
+        font-size: 26px ;
+        line-height: 38px;
+    }
+    @include device__xsm{
+        font-size: 23px ;
+        line-height: 35px;
+    }
+    
+}
+@mixin heading__4($f__size: 33px,$f__weight:800,$l__height: 40px,$color: $heading__color,$padding: 0,$margin:0,$f__family: $h__font){
+    font-size: $f__size;
+    font-weight: $f__weight;
+    line-height: $l__height;
+    color: $color;
+    padding: $padding;
+    margin: $margin;
+    font-family: $f__family;
+    
+    
+    /* ====== Responsive Devices ====== */
+    
+    @include device__xl{
+        font-size:31px ;
+        line-height: 38px;
+    }
+    @include device__lg{
+        font-size: 29px ;
+        line-height: 36px;
+    }
+    @include device__md{
+        font-size: 27px ;
+        line-height: 34px;
+    }
+    @include device__sm{
+        font-size: 25px ;
+        line-height: 32px;
+    }
+    @include device__xsm{
+        font-size: 23px ;
+        line-height: 30px;
+    }
+    
+}
+@mixin heading__5($f__size: 24px,$f__weight:800,$l__height: 32px,$color: $heading__color,$padding: 0,$margin:0,$f__family: $h__font){
+    font-size: $f__size;
+    font-weight: $f__weight;
+    line-height: $l__height;
+    color: $color;
+    padding: $padding;
+    margin: $margin;
+    font-family: $f__family;
+    
+    
+    /* ====== Responsive Devices ====== */
+    
+    @include device__xl{
+        font-size:23px ;
+        line-height: 30px;
+    }
+    @include device__lg{
+        font-size: 22px ;
+        line-height: 28px;
+    }
+    @include device__md{
+        font-size: 21px ;
+        line-height: 26px;
+    }
+    @include device__sm{
+        font-size: 20px ;
+        line-height: 24px;
+    }
+    @include device__xsm{
+        font-size: 20px ;
+        line-height: 22px;
+    }
+    
+}
+@mixin heading__6($f__size: 18px,$f__weight:600,$l__height: 28px,$color: $heading__color,$padding: 0,$margin:0,$f__family: $h__font){
+    font-size: $f__size;
+    font-weight: $f__weight;
+    line-height: $l__height;
+    color: $color;
+    padding: $padding;
+    margin: $margin;
+    font-family: $f__family;
+    
+}
+/* ===================================
+    End heading Maxin Here
+==================================== */
+
+
+
+/* ===================================
+    Start Paragraph Maxin Here
+==================================== */
+@mixin paragraph($f__size: 14px,$f__weight:400,$l__height: 28px,$color: $paragraph__color,$padding: 0,$margin:0,$f__family: $b__font){
+    font-size: $f__size;
+    font-weight: $f__weight;
+    line-height: $l__height;
+    color: $color;
+    padding: $padding;
+    margin: $margin;
+    font-family: $f__family;
+}
+
+@mixin paragraph__title($f__size: 16px,$f__weight:700,$l__height: 28px,$color: $paragraph__color,$padding: 0,$margin:0,$f__family: $b__font){
+    font-size: $f__size;
+    font-weight: $f__weight;
+    line-height: $l__height;
+    color: $color;
+    padding: $padding;
+    margin: $margin;
+    font-family: $f__family;
+}
+
+/* ===================================
+    End paragraph Maxin Here
+==================================== */
+
+
+/* ===================================
+    Start Button Maxin Here
+==================================== */
+@mixin btn__lg($f__size: 16px,$f__weight:500,$l__height: 28px,$color: $white__color,$bg__color:$orange__color,$padding: 13px 35px,$margin:0,$f__family: $b__font,$b__color:none,$b__radius:0){
+    font-size: $f__size;
+    font-weight: $f__weight;
+    line-height: $l__height;
+    color: $color;
+    background-color: $bg__color;
+    padding: $padding;
+    margin: $margin;
+    font-family: $f__family;
+    text-align: center;
+    border: 1px solid $b__color;
+    border-radius: $b__radius;
+
+    /* ====== Device Responsive  ====== */
+    @include device__xxl{
+        padding: 12px 34px;
+        line-height: 26px;
+    }
+    @include device__xl{
+        padding: 11px 33px;
+        line-height: 25px;
+    }
+    @include device__lg{
+        padding: 10px 32px;
+        line-height: 24px;
+    }
+    @include device__md{
+        padding: 9px 30px;
+        line-height: 24px;
+    }
+    @include device__sm{
+        padding: 10px 28px;
+        line-height: 23px;
+    }
+    @include device__xsm{
+        padding: 9px 25px;
+        line-height: 22px;
+    }
+
+
+}
+
+@mixin btn__sm($f__size: 16px,$f__weight:600,$l__height: 24px,$color: $white__color,$bg__color:$orange__color,$padding: 12px 25px,$margin:0,$f__family: $b__font,$b__color:none,$b__radius:0){
+    font-size: $f__size;
+    font-weight: $f__weight;
+    line-height: $l__height;
+    color: $color;
+    background-color: $bg__color;
+    padding: $padding;
+    margin: $margin;
+    font-family: $f__family;
+    text-align: center;
+    border: 1px solid $b__color;
+    border-radius: $b__radius;
+
+
+     /* ====== Device Responsive  ====== */
+     @include device__xxl{
+        padding: 11px 24px;
+        line-height: 23px;
+    }
+    @include device__xl{
+        padding: 10px 24px;
+        line-height: 23px;
+    }
+    @include device__lg{
+        padding: 10px 23px;
+        line-height: 23px;
+    }
+    @include device__md{
+        padding: 9px 22px;
+        line-height: 22px;
+    }
+    @include device__sm{
+        padding: 9px 21px;
+        line-height: 21px;
+    }
+    @include device__xsm{
+        padding: 8px 20px;
+        line-height: 21px;
+    }
+
+
+}
+
+@mixin btn__xsm($f__size: 16px,$f__weight:500,$l__height: 20px,$color: $white__color,$bg__color:$orange__color,$padding: 7px 15px,$margin:0,$f__family: $b__font,$b__color:none,$b__radius:0){
+    font-size: $f__size;
+    font-weight: $f__weight;
+    line-height: $l__height;
+    color: $color;
+    background-color: $bg__color;
+    padding: $padding;
+    margin: $margin;
+    font-family: $f__family;
+    text-align: center;
+    border: 1px solid $b__color;
+    border-radius: $b__radius;
+}
+
+/* ===================================
+    End Button Maxin Here
+==================================== */
+
+
+/* ===================================
+    End Icon Maxin Here
+==================================== */
+@mixin icon__lg($width:45px,$height:45px,$f__size: 25px,$f__weight:600,$color: $white__color,$bg__color: $orange__color,$padding: 0,$margin:0,$f__family: $b__font,$b__color:none, $b__radius:0,$display:inline-flex,$a__items:center, $j__content:center){
+    height: $height;
+    width: $width;
+    font-size: $f__size;
+    font-weight: $f__weight;
+    line-height: $height;
+    color: $color;
+    background-color: $bg__color;
+    padding: $padding;
+    margin: $margin;
+    font-family: $f__family;
+    text-align: center;
+    border: 1px solid $b__color;
+    border-radius: $b__radius;
+    display: $display;
+    align-items: $a__items;
+    justify-content: $j__content;
+
+
+/* ====== Device Responsive  ====== */
+@include device__xxl{
+    width: 42px;
+    height: 42px;
+    font-size: 24px;
+}
+@include device__xl{
+    width: 39px;
+    height: 39px;
+    font-size: 23px;
+}
+@include device__lg{
+    width: 36px;
+    height: 36px;
+    font-size: 21px;
+}
+@include device__md{
+    width: 34px;
+    height: 34px;
+    font-size: 21px;
+}
+@include device__sm{
+    width: 32px;
+    height: 32px;
+    font-size: 20px;
+}
+@include device__xsm{
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+}
+}
+
+@mixin icon__sm($width:30px,$height:30px,$f__size: 18px,$f__weight:600,$color: $white__color,$bg__color: $orange__color,$padding:0,$margin:0,$f__family: $b__font,$b__color:none, $b__radius:0,$display:inline-flex,$a__items:center, $j__content:center){
+    height: $height;
+    width: $width;
+    font-size: $f__size;
+    font-weight: $f__weight;
+    line-height: $height;
+    color: $color;
+    background-color: $bg__color;
+    padding: $padding;
+    margin: $margin;
+    font-family: $f__family;
+    text-align: center;
+    border: 1px solid $b__color;
+    border-radius: $b__radius;
+    display: $display;
+    align-items: $a__items;
+    justify-content: $j__content;
+}
+
+@mixin icon__xsm($width:16px,$height:16px,$f__size: 16px,$f__weight:600,$color: $white__color,$bg__color: transparent,$padding:0,$margin:0,$f__family: $b__font,$b__color:none, $b__radius:0,$display:inline-flex,$a__items:center, $j__content:center){
+    height: $height;
+    width: $width;
+    font-size: $f__size;
+    font-weight: $f__weight;
+    line-height: $height;
+    color: $color;
+    background-color: $bg__color;
+    padding: $padding;
+    margin: $margin;
+    font-family: $f__family;
+    text-align: center;
+    border: 1px solid $b__color;
+    border-radius: $b__radius;
+    display: $display;
+    align-items: $a__items;
+    justify-content: $j__content;
+}
+/* ===================================
+    End Icon Maxin Here
+==================================== */
+
+
+
+/* ===================================
+    Start Essential Maxin Here
+==================================== */
+@mixin hover($color:transparent, $bg__color:transparent, $transition: 0.4s){
+color: $color;
+background-color: $bg__color;
+transition: $transition;
+}
+@mixin display__flex($display:flex,$a__items:default,$j__content:default){
+    display: $display;
+    align-items: $a__items;
+    justify-content: $j__content;
+}
+@mixin after__before($content: "",$position: absolute,$width:default, $height: default, $bg__color:transparent, $left: default,$right:default,$top: default, $bottom: default,$inset: default,$z__index:default){
+content: $content;
+position: $position;
+width: $width;
+height: $height;
+background-color: $bg__color;
+left: $left;
+top: $top;
+right: $right;
+bottom: $bottom;
+inset: $inset;
+z-index: $z__index;
+
+}
+@mixin bg__image($bg__size: cover,$bg__position:center,$bg__repeat:no-repeat,){
+background-size: $bg__size;
+background-position: $bg__position;
+background-repeat: $bg__repeat;
+}
+@mixin hide__show($visibility: default, $transform:default, $transition: 0.4s){
+visibility: $visibility;
+transform: $transform;
+transition: $transition;
+}
+
+/* ===================================
+    End Essential Maxin Here
+==================================== */
+
+
+
+

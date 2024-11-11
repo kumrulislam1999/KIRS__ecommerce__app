@@ -1,0 +1,19 @@
+#all__products__page{
+
+
+    /* ======= Start Admin Profile Section ======= */
+    #all__products__section{
+        #all__products__content__box{
+            height: 100%;
+            padding:30px 20px;
+            background-color: rgba($teal__color,0.1);
+            position: relative;
+            h4{
+                @include heading__4($margin:0 0 20px);
+            }
+            
+        }
+    }
+    /* ======= End Admin Profile Section ======= */
+
+}

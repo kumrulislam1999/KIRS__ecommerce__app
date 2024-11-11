@@ -1,0 +1,85 @@
+#home__page{
+
+    /* ======= Start Arriaval Section Here ======= */
+    #arrival__section{
+        #arrival__box{
+            h3{
+                text-align: center;
+                @include heading__3($margin:0 0 20px);
+            }
+        }
+    }
+    /* ======= End Arriaval Section Here ======= */
+
+    /* ======= Start Arriaval Section Here ======= */
+    #best__sell__section{
+        #best__sell__box{
+            h3{
+                text-align: center;
+                @include heading__3($margin:0 0 20px);
+            }
+            .see__all__btn{
+                display: block;
+                @include btn__lg($bg__color:$white__color,$color:$teal__color,$b__color:$teal__color,$margin:30px auto);
+                &:hover{
+                    @include hover($color:$white__color,$bg__color:$teal__color);
+                    border-color: $teal__color;
+                }
+
+            }
+        }
+    }
+    /* ======= End Arriaval Section Here ======= */
+
+    /* ======= Start Deal of Day Section Here ======= */
+    #dealof__day__section{
+        #dealof__day__box{
+            h3{
+                text-align: center;
+                @include heading__3();
+            }
+            #time__box{
+                @include display__flex($a__items:center,$j__content:center);
+                box-shadow: 0 0 2px 1px rgba($black__color,0.2);
+                background-color: $white__color;
+                gap: 5px;
+                padding: 10px 20px;
+                border-radius: 50px;
+                transform: translateY(50%);
+
+                .time__item{
+                    text-align: center;
+                    p{
+                        @include paragraph($color:$heading__color,$f__weight:400,);
+                    }
+                    h6{
+                        @include heading__6($f__weight:500)
+                    }
+                }
+                span{
+                    font-size: 30px;
+                    font-weight: 600;
+                    color: $orange__color;
+                }
+            }
+
+            #dealof__box{
+                box-shadow: 0 0 2px 2px rgba($black__color,0.1);
+            }
+        }
+    }
+    /* ======= End Deal of Day Section Here ======= */
+
+
+    /* ======= Start Arriaval Section Here ======= */
+    #latestnew__section{
+        #latest__box{
+            h3{
+                text-align: center;
+                @include heading__3($margin:0 0 20px);
+            }
+        }
+    }
+    /* ======= End Arriaval Section Here ======= */
+
+}

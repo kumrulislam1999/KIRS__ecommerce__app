@@ -1,0 +1,207 @@
+#add__to__card{
+    #add__to__card__box{
+        // box-shadow:  0 0 2px 2px rgba($black__color,0.2);
+        overflow-x: scroll;
+        
+        .table__box__lg{
+            width: 100%;
+            text-align: center;
+            .table__head{
+                border: 1px solid $teal__color;
+                border-bottom: 2px solid $teal__color;
+                background-color: $teal__color;
+                th{
+                    h6{
+                        @include heading__6($padding: 5px,$color:$white__color,$f__weight:500);
+                    }
+                }
+
+            }
+            .table__body{
+                .row__box{
+                    td{
+                        padding: 10px;
+                        text-wrap: nowrap;
+                        border: 1px solid rgba($teal__color,0.2);
+                        
+                        .close__btn{
+                            @include icon__sm($width:36px,$height:36px,$color:$heading__color,$bg__color:transparent);
+                            &:hover{
+                                @include hover($color:$teal__color);
+                            }   
+                        }
+                        img{
+                            width: 100px;
+                            height: 100px;
+                            min-width: 80px;
+                            min-height: 80px;
+                        }
+                        .title{
+                            @include heading__6($f__weight:500);
+                            &:hover{
+                                @include hover($color:$teal__color);
+                            }
+                        }
+                        .unit__price{
+                            @include paragraph($color:$heading__color);
+                        }
+                        .quantity{
+                            @include display__flex($a__items:center,$j__content:center);
+                            button{
+                                @include icon__xsm($width:36px,$height:36px,$color:$teal__color,$bg__color:transparent,$b__color:$teal__color);
+                                &:hover{
+                                    @include hover($color:$white__color,$bg__color:$teal__color);
+                                }
+                            }
+                            input{
+                                width: 50px;
+                                border-top: 1px solid $teal__color;
+                                border-bottom: 1px solid $teal__color;
+                                height: 36px;
+                                text-align: center;
+                                @include paragraph($color:$heading__color);
+                            }
+                        }
+                        .status{
+                            @include display__flex($a__items:center,$j__content:center);
+                            @include paragraph($color:$heading__color);
+                            gap:5px;
+                            i{
+                                @include icon__xsm($color:$teal__color);
+                            }
+                        }
+                        .total__price{
+                            @include paragraph($f__weight:600,$color:$teal__color);
+                        }
+                    }
+                }
+            }
+           
+        }
+        .table__box__sm{
+            width: 100%;
+            // display: none;
+            visibility: hidden;
+            display: none;
+            .table__head{
+                border: 1px solid $teal__color;
+                border-bottom: 2px solid $teal__color;
+                background-color: $teal__color;
+                width: 100%;
+                text-align: center;
+                th{
+                    
+                    h6{
+                        @include heading__6($padding:5px,$color:$white__color,$f__weight:800);
+                    }
+                }
+
+            }
+            .table__body{
+                .product__item{
+                    padding: 12px 0;
+                    width: 100%;
+                    td{
+                        width: 50%;
+                        padding:10px 25px;
+                        border: 1px solid rgba($black__color,0.2);
+                        text-align: right;
+                        .close__btn{
+                            @include icon__sm($width:36px,$height:36px,$color:$heading__color,$bg__color:transparent);
+                            &:hover{
+                                @include hover($color:$teal__color);
+                            }   
+                        }
+                        .img__btn{
+                            width: 100px;
+                            height: 100px;
+                        }
+                        .title{
+                            @include heading__6();
+                            &:hover{
+                                @include hover($color:$teal__color);
+                            }
+                        }
+                        .unit__price{
+                            @include paragraph($color:$heading__color);
+                        }
+                        .quantity{
+                            @include display__flex($a__items:center,$j__content:end);
+                            button{
+                                @include icon__xsm($width:36px,$height:36px,$color:$teal__color,$bg__color:transparent,$b__color:$teal__color);
+                                &:hover{
+                                    @include hover($color:$white__color,$bg__color:$teal__color);
+                                }
+                            }
+                            input{
+                                width: 50px;
+                                border-top: 1px solid $teal__color;
+                                border-bottom: 1px solid $teal__color;
+                                height: 36px;
+                                text-align: center;
+                                @include paragraph($color:$heading__color);
+                            }
+                        }
+                        .status{
+                            @include display__flex($a__items:center,$j__content:end);
+                            @include paragraph($color:$heading__color);
+                            gap:5px;
+                            i{
+                                @include icon__xsm($color:$teal__color);
+                            }
+                        }
+                        .total__price{
+                            @include paragraph($f__weight:600,$color:$teal__color);
+                        }
+                        
+
+                    }
+                    th{
+                        width: 50%;
+                        padding: 15px;
+                        border: 1px solid rgba($black__color,0.2);
+                        text-align: left;
+                        h6{
+                            @include heading__6($f__weight:500)
+                        }
+                    }
+                }
+            }
+        }
+
+        /* ======== Responsive Devices Here ========= */
+
+        
+        @include device__sm{
+            .table__box__lg{
+                display: none;
+            }
+            .table__box__sm{
+                visibility: visible;
+                display: table;
+                
+            }
+
+        }
+        @include device__xsm{
+            .table__box__lg{
+                display: none;
+            }
+            .table__box__sm{
+                visibility: visible;
+                display: table;
+                .table__body{
+                    .product__item{
+                        padding: 12px 0;
+                        th,td{
+                            padding: 10px;
+                        }
+                    }
+                    
+                }   
+            }
+
+        }
+        
+    }
+}

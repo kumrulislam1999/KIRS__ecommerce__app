@@ -1,0 +1,76 @@
+#latest__News{
+    background-color: $white__color;
+    margin: 12px;
+    box-shadow: 0 0 5px 5px rgba($black__color,0.1);
+    #latest__card{
+        text-align: center;
+        #img__box{
+            overflow: hidden;
+            .img__normal{
+                    transform: scale(1);
+                    width: 100%;
+                    transition: 0.4s;
+                }
+            
+        }
+        #text__box{
+            padding: 25px 12px;
+            position: relative;
+            h6{
+                a{
+                    @include heading__6($color:$black__color,$f__weight:800);
+                    &:hover{
+                        @include hover($color:$teal__color)
+                    }
+                }
+            }
+            
+    
+            .description{
+                @include paragraph();
+            }
+
+            #badge__box{
+                @include paragraph($color:$white__color,$f__weight:500);
+                position: absolute;
+                top: 0;
+                right: 5px;
+                padding: 0px 10px;
+                border-radius: 0;
+                background-color: $teal__color;
+                transform: translateY(-50%);
+            }
+            #action__box{
+                margin-top: 20px;
+                @include display__flex($a__items:center,$j__content:space-between);
+                gap: 10px;
+                .detail__btn{
+                    @include btn__sm($bg__color:$white__color,$b__color:$teal__color,$color:$teal__color);
+                    &:hover{
+                        @include hover($color:$white__color,$bg__color:$teal__color)
+                    }
+                }
+                p{
+                    @include display__flex($a__items:center,$j__content:Start);
+                    gap: 5px;
+                    i{
+                        @include icon__xsm($color:$teal__color,$width:24px,$height:24px,$f__size:20px);
+                    }
+                    .date{
+                        @include paragraph($color:$teal__color);
+                    }
+                }
+            }
+        }
+
+       
+        &:hover{
+
+            #img__box{
+                .img__normal{
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}

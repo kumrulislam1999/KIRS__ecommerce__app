@@ -1,0 +1,118 @@
+#product__details{
+    #product__details__box{
+        #details__box{
+            h3{
+                @include heading__3();
+            }
+            .product__rating__box{
+                @include display__flex();
+                padding: 10px 0;
+                gap: 10px;
+                
+                .review{
+                    a{
+                        @include paragraph($color:$heading__color,$l__height:16px);
+                        border-left: 2px solid $teal__color;
+                        padding-left: 10px;
+                        &:hover{
+                            @include hover($color:$teal__color);
+                        }
+                    }
+                }
+            }
+            .price{
+                @include paragraph($f__weight:800,$color:$heading__color,$f__size:18px);
+                span{
+                    font-weight: 500;
+                    font-size: 16px;
+                }
+            }
+            .description{
+                @include paragraph($margin:15px 0 25px)
+            }
+            #color__size__box{
+                padding: 25px 0;
+                border-top: 2px solid $teal__color;
+                border-bottom: 2px solid $teal__color;
+                #color__box,
+                #size__box{
+                    @include display__flex;
+                    margin: 12px 0;
+                    label{
+                        width: 30%;
+                        @include paragraph($f__weight:600);
+                    }
+                    select{
+                        width: 70%;
+                        @include paragraph();
+                        margin-left: auto;
+                        border: 1px solid $teal__color;
+                        padding: 5px 20px;
+                    }
+                }
+            }
+            #action__box{
+                padding: 20px 0;
+                @include display__flex($a__items:center,$j__content:start);
+                flex-wrap: wrap;
+                gap: 5px;
+                #count__box{
+                    @include display__flex($a__items:center,$j__content:Start);
+                    input{
+                        @include paragraph($l__height:16px);
+                        text-align: center;
+                        border-top: 1px solid $teal__color;
+                        border-bottom: 1px solid $teal__color;
+                        padding:9px 5px ;
+                        width: 50px;
+                    }
+                }
+                .icon__btn{
+                    @include icon__xsm($color:$teal__color,$b__color:$teal__color,$width:36px,$height:36px,$f__size:20px,$margin:5px 0);
+                        &:hover{
+                            @include hover($color:$white__color,$bg__color:$teal__color);
+                        }
+                }
+                .add__to__cart__btn{
+                    @include btn__xsm($b__color:$teal__color,$bg__color:$white__color,$color:$teal__color);
+                    &:hover{
+                        @include hover($color:$white__color,$bg__color:$teal__color)
+                    }
+                }
+            }
+            #detail__short__social__media{
+                #short__details{
+                    th{
+                        @include paragraph($f__weight:600,$color:$heading__color);
+                        padding: 0 20px;
+                    }
+                    td{
+                        padding:0 20px;
+                        a{
+                            @include paragraph($color:$heading__color);
+                            &:hover{
+                                @include hover($color:$teal__color);
+                            }
+
+                        }
+                    }
+                }
+                #social__media{
+                    @include display__flex($a__items:center,$j__content:end);
+                    gap: 5px;
+                    .social__item{
+                       @include icon__sm($width:36px,$height:36px,$bg__color:transparent,$color:$teal__color,$b__color:$teal__color);
+                       &:hover{
+                        @include hover($bg__color:$teal__color,$color:$white__color);
+                       }
+                    }
+
+                    /* ======= Device Responsive Here ======= */
+                    @include device__xsm{
+                        justify-content: start;
+                    }
+                }    
+            }
+        }
+    }
+}

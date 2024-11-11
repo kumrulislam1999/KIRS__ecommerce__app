@@ -1,0 +1,11 @@
+.rating__box{
+    padding: 0 0;
+    @include display__flex($a__items:center,$j__content:start);
+    gap: 10px;
+    span{
+        @include paragraph($color:$teal__color,$f__weight:500);
+    }
+    i{
+        @include icon__xsm($color:$teal__color);
+    }
+}

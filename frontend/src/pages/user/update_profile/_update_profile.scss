@@ -1,0 +1,37 @@
+#update__user__profile__page{
+
+
+    /* ======= Start User Profile Section ======= */
+    #update__user__profile__section{
+        #user__content__box{
+            height: 100%;
+            padding:30px 20px;
+            background-color: rgba($teal__color,0.1);
+            position: relative;
+            h4{
+                @include heading__4($margin:0 0 20px);
+            }
+            .form__box{
+                .input__group{
+                    margin: 12px;
+                    label{
+                        @include paragraph($color:$heading__color,$f__weight:600,$margin:0 0 5px);
+                        display: block;
+                    }
+                    input,input:focus{
+                        @include paragraph($padding:10px 20px);
+                        width: 100%;
+                        box-shadow: 0 0 1px 1px rgba($black__color,0.1);
+                        background-color: $white__color;
+                    }
+                }
+            }
+            .update__btn{
+                @include btn__lg($b__color:$teal__color,$bg__color:transparent,$color:$teal__color,$margin:25px 20px 10px);
+                &:hover{
+                    @include hover($color:$white__color,$bg__color:$teal__color);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,190 @@
+#footer__section{
+    background-color:$teal__color;
+    position: relative;
+
+    #footer__top{
+        
+        padding-bottom: 30px;
+        #footer__social__box{
+            #social__media{
+                @include display__flex($j__content:start,$a__items:center);
+                gap: 5px;
+                .media__item{
+                    @include icon__lg($color:$white__color,$b__color:$white__color, $bg__color:$teal__color);
+                    &:hover{
+                        @include hover($color:$teal__color,$bg__color:$white__color);
+                    }
+                }
+            }
+        }
+        #footer__logo__box{
+            #logo__box{
+                @include display__flex($j__content:center);
+                img{
+                    height: 70px;
+                    width: 150px;
+                    margin: auto;;
+                }
+            }
+        }
+        #footer__card__box{
+            #payment__box{
+                @include display__flex($j__content:end);
+                img{
+                    width: 100px; 
+                    height: 70px;
+                }
+            }
+        }
+
+        /* ======== Responsive Deivces  Here ======== */
+        @include device__sm{
+            
+            #footer__logo__box{
+                #logo__box{
+                    margin: 10px 0;
+                    justify-content: center;
+                    img{
+                        height: 50px;
+                        width: 90px;
+                    };
+                }
+            }
+            
+        }
+        @include device__xsm{
+            #footer__social__box{
+                #social__media{
+                    margin: 10px 0;
+                    justify-content: center;
+                }
+            }
+            #footer__logo__box{
+                #logo__box{
+                    margin: 10px 0;
+                    justify-content: center;
+                    img{
+                        height: 30px;
+                        width: 90px;
+                    };
+                }
+            }
+            #footer__card__box{
+                #payment__box{
+                    margin: 10px 0;
+                    height: 50px;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+    #footer__middle{
+        padding: 30px 0;
+        margin-bottom: 15px;
+        border-bottom: 3px solid $white__color;
+        border-top: 3px solid $white__color;
+        h5{@include heading__5($color:$white__color,$margin: 0 0 15px)}
+
+        #footer__quick__box{
+            padding: 15px 0;
+            #quick__link{
+                .quick__link__item{
+                    @include display__flex($j__content:Start,$a__items:center);
+                    gap: 5px;
+                    i{
+                        @include icon__xsm($color:$white__color);
+                        width: 0;
+                        transition: 0.4s
+                    };
+                    span{
+                        @include paragraph($color:$white__color);
+                    }
+                    &:hover{
+                        i{
+                            
+                            transition: 0.4s;
+                            width: 16px;
+                        }
+                    }
+                    
+                    
+                }
+            }
+        }
+        #footer__opening__box{
+            padding: 15px 0;
+            #opening__time{
+                th{
+                    @include paragraph($color:$white__color,$f__weight:600,$padding:0 15px 0 0);
+                }
+                td{
+                    @include paragraph($color:$white__color)
+                }
+            }
+        }
+        #footer__contact__box{
+            padding: 5px 0;
+            #contact__info{
+                .item__box{
+                    @include display__flex($j__content:start,$a__items:center);
+                    gap:10px;
+                    i{
+                        @include icon__xsm;
+                    }
+                    a{
+                        @include paragraph($color:$white__color,$margin:10px 0);
+                    }
+                }
+
+            }
+        }
+        #footer__subscription__box{
+            padding: 15px 0;
+            #subscription__box{
+                p{
+                    @include paragraph($color:$white__color);
+                    padding-bottom: 25px;
+                }
+                .input__box{
+                    @include display__flex($a__items:center);
+                    background-color: $white__color;
+                    padding: 3px;
+                    input{
+                        width: 100%;
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 28px;
+                        padding: 5px 20px;
+                    }
+                    .subscribe__btn{
+                        @include btn__sm($b__color:$teal__color,$color:$teal__color,$bg__color:$white__color);
+                        &:hover{
+                            @include hover($color:$white__color,$bg__color:$teal__color);
+                        }
+                    }
+                }
+            }
+        }
+
+        /* ========= Device Responsive =========== */
+        @include device__xsm{
+            padding: 0 25px;
+        }
+
+    }
+
+    #footer__bottom{
+        position: absolute;
+        box-shadow: 0 0 3px 1px rgba($white__color,0.3);
+        bottom: 0;
+        left: 0;
+        right: 0;
+        #copywrite{
+            @include display__flex($a__items:center,$j__content:center);
+            p{
+                @include paragraph($color:$white__color);
+                padding: 15px 15px;
+            }
+        }
+    }
+}

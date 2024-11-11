@@ -1,0 +1,170 @@
+#update__product__page{
+
+
+    /* ======= Start User Profile Section ======= */
+    #update__product__section{
+        #product__content__box{
+            height: 100%;
+            padding:30px 20px;
+            background-color: rgba($teal__color,0.1);
+            position: relative;
+            h4{
+                @include heading__4($margin:0 0 20px);
+            }
+            .form__box{
+
+                #upload__images__box{
+                    margin-bottom: 30px;
+                    h5{
+                        @include heading__5($margin:0 0 15px)
+                    }
+                    #image__preview__upload{
+                        label{
+                            height: 200px;
+                            border: 3px dashed $teal__color;
+                            padding: 50px;
+                            margin: 12px;
+                            @include display__flex($a__items:center,$j__content:center);
+                            gap: 5px;
+                            flex-direction: column;
+                            cursor: pointer;
+                            text-align: center;
+                            i{
+                                @include icon__sm($width:50px,$height:50px,$color:$teal__color,$bg__color:transparent,$f__size:40px)
+                            }
+                            h6{
+                                @include heading__6();
+                                span{
+                                    color: $teal__color;
+                                }
+                            }
+                            p{
+                                @include paragraph($f__size:10px)
+                            }
+                        }
+                        #images__preview__box{
+                            height: 200px;
+                            border: 3px solid $teal__color;
+                            padding: 20px;
+                            margin: 12px;
+                            #preview{
+                                overflow: scroll;
+                                height: 100%;
+                                @include display__flex($a__items:center,$j__content:center);
+                                gap: 5px;
+                                flex-wrap: wrap;
+
+                                img{
+                                    width: 80px;
+                                    height: 80px;
+                                }
+
+                            }
+                        }
+                    }
+                    
+                }
+                #product__info__box{
+                    h5{
+                        @include heading__5($margin:0 0 10px)
+                    }
+                    .input__group{
+                        margin: 12px;
+                        label{
+                            @include paragraph($color:$heading__color,$f__weight:600,$margin:0 0 5px);
+                            display: block;
+                        }
+                        input,input:focus{
+                            @include paragraph($padding:10px 20px,$color:$heading__color);
+                            width: 100%;
+                            height: 40px;
+                            box-shadow: 0 0 1px 1px rgba($black__color,0.1);
+                            background-color: $white__color;
+                        }
+                        select{
+                            @include paragraph($padding:10px 20px,$color:$heading__color);
+                            width: 100%;
+                            height: 40px;
+                            box-shadow: 0 0 1px 1px rgba($black__color,0.1);
+                            background-color: $white__color;
+                        }
+                        #size__box{
+                            @include display__flex($a__items:center,$j__content:start);
+                            flex-wrap: wrap;
+                            gap: 10px;
+                            label{
+                                @include paragraph($color:$heading__color,$padding:0 10px);
+                                box-shadow: 0 0 1px 1px rgba($black__color,0.1);
+                                background-color: $white__color;
+                                &:hover,&.active{
+                                    @include hover($color:$white__color,$bg__color:$teal__color);
+                                }
+                            }
+                        }
+                        #color__box{
+                            @include display__flex($a__items:center,$j__content:start);
+                            flex-wrap: wrap;
+                            gap: 10px;
+                            label{
+                                @include display__flex($a__items:center,$j__content:center);
+                                padding:8px;
+                                box-shadow: 0 0 1px 1px rgba($black__color,0.1);
+                                background-color: $white__color;
+                                span{
+                                    width: 15px;
+                                    height: 15px;
+                                    border-radius: 50%;
+                                    box-shadow: 0 0 1px 1px rgba($black__color,0.1);
+                                    &.red{
+                                        background-color: red;
+                                    }
+                                    &.green{
+                                        background-color: green;
+                                    }
+                                    &.teal{
+                                        background-color: $teal__color;
+                                    }
+                                    &.blue{
+                                        background-color: $blue__color;
+                                    }
+                                    &.orange{
+                                        background-color: $orange__color;
+                                    }
+
+                                }
+                                &:hover,&.active{
+                                    @include hover($color:$white__color,$bg__color:$teal__color);
+                                }
+                            }
+                        }
+                        textarea,textarea:focus{
+                            @include paragraph($padding:10px 20px,$color:$heading__color);
+                            width: 100%;
+                            height: 100px;
+                            box-shadow: 0 0 1px 1px rgba($black__color,0.1);
+                            background-color: $white__color;
+                            resize: none;
+                        }
+                    }
+                }
+                #btn__box{
+                    margin-top: 20px;
+                    @include display__flex($a__items:center,$j__content:space-between);
+                    gap: 5px;
+                    button{
+                        @include btn__lg($bg__color:transparent,$color:$teal__color,$b__color:$teal__color);
+                        &:hover{
+                            &.create__btn{
+                                @include hover($bg__color:$teal__color,$color:$white__color);
+                            }
+                            &.cancel__btn{
+                                @include hover($bg__color:$red__color,$color:$white__color);
+                                border-color: $red__color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

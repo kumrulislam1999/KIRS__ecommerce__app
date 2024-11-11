@@ -1,0 +1,14 @@
+.prev__arrow{
+    @include display__flex($a__items:center,$j__content:center);
+    @include icon__sm($width:40px,$height:40px,$b__radius:50%,$b__color:$white__color,$bg__color:$white__color,$color:$teal__color);
+    position: absolute;
+    bottom:0%;
+    left: 50px;
+    transform: translateY(-20%);
+    z-index: 10;
+    &:hover{
+        @include hover($color:$white__color,$bg__color:$teal__color);
+        border-color: $teal__color;
+        
+    }
+}

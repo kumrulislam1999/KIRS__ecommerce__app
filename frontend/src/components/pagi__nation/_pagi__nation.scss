@@ -1,0 +1,13 @@
+#pagi__nation{
+    margin-top: 30px;
+
+    #pagi__nation__box{
+        @include display__flex($a__items:center,$j__content:center);
+        .pagi__nation__item{
+            @include icon__xsm($width:36px,$height:36px,$b__color:$teal__color,$color:$teal__color);
+            &:hover,&.active{
+                @include hover($color:$white__color,$bg__color:$teal__color);
+            }
+        }
+    }
+}

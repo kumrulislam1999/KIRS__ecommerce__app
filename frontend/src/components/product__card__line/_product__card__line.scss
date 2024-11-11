@@ -1,0 +1,118 @@
+#product__card__line{
+    background-color: $white__color;
+    margin: 12px;
+    box-shadow: 0 0 5px 5px rgba($black__color,0.1);
+    #card__box{
+        #img__box{
+            position: relative;
+            img{
+                width: 100%;
+                max-width: 100%;
+                transition: 0.4s;
+                &.img__hover{
+                    transform: scale(0);
+                    display: none;
+                }
+                &.img__normal{
+                    transform: scale(1);
+                    display: block;
+                }
+            }
+            #badge__box{
+                @include paragraph($color:$white__color,$f__weight:500);
+                position: absolute;
+                top: 5px;
+                left: 5px;
+                padding: 0px 10px;
+                border-radius: 0;
+                background-color: $teal__color;
+            }
+        }
+        #text__box{
+            padding: 25px 30px;
+            height: 100%;
+            width: 100%;
+            
+            h6{
+                a{
+                    @include heading__6($color:$black__color,$f__weight:800,$margin:0 0 5px);
+                    &:hover{
+                        @include hover($color:$teal__color)
+                    }
+                }
+            }
+            .price{
+                @include paragraph($f__weight:500);
+                padding-bottom: 5px;
+            }
+            .rating__box{
+                padding: 5px 0;
+                @include display__flex($a__items:center,$j__content:start);
+                gap: 10px;
+                span{
+                    @include paragraph($color:$teal__color,$f__weight:500);
+                }
+                i{
+                    @include icon__xsm($color:$teal__color);
+                }
+            }
+            .description{
+                @include paragraph();
+            }
+            .detail__btn{
+                @include btn__sm($margin:20px 0 0,$bg__color:$white__color,$b__color:$teal__color,$color:$teal__color);
+                &:hover{
+                    @include hover($color:$white__color,$bg__color:$teal__color)
+                }
+            }
+            #action__box{
+                margin: 20px 0 10px;
+                @include display__flex($a__items:center,$j__content:start);
+                gap: 5px;
+                a{
+                    @include icon__lg($b__radius:50%,$color:$teal__color,$b__color:$teal__color,$bg__color:transparent);
+                    &:hover{
+                        @include hover($bg__color:$teal__color,$color:$white__color);
+                    }
+                }
+            }
+        }
+
+        
+        
+        &:hover{
+
+            #img__box{
+                .img__hover{
+                    transform: scale(1);
+                    display: block;
+                }
+                .img__normal{
+                    display: none;
+                    transform: scale(0);
+                }
+            }
+            #action__box{
+                a{
+                    opacity: 1;;
+                    &.cart__btn{
+                        top: 40%;
+                        left: 30%;
+                    }
+                    &.wishlist__btn{
+                        top: 40%;
+                        right: 30%;
+                    }
+                    &.view__btn{
+                        bottom: 40%;
+                        left: 30%;
+                    }
+                    &.compare__btn{
+                        bottom: 40%;
+                        right: 30%;
+                    }
+                }
+            }
+        }
+    }
+}

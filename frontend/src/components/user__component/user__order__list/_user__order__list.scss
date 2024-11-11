@@ -1,0 +1,119 @@
+#user__orderslist__box{
+    #order__list{
+        padding: 5px 0;
+        overflow: scroll;
+        background-color: $white__color;
+        .table__box{
+            .table__head{
+                background-color: $teal__color;
+                border-bottom: 3px solid $white__color;
+                margin: 3px;
+                th{
+                    padding: 10px;
+                    border: 1px solid $white__color;
+                    text-align: center;
+                    h6{
+                        @include heading__6($color:$white__color,$f__weight:500);
+                        text-wrap: nowrap;
+                    }
+                }
+            }
+            .table__body{
+                td{
+                    padding: 10px;
+                    border: 1px solid rgba($black__color,0.4);
+                    text-align: center;
+                    p{
+                        @include paragraph($color:$heading__color);
+                        &.order__id{
+                            font-weight: 800;
+                            font-size: 18px;
+                            color: $teal__color;
+                        }
+                        &.price{
+                            font-weight: 600;
+                            color: $teal__color;
+                        }
+                    }
+                    #product__box{
+                        p{
+                            font-weight: 600;
+                            line-height: 20px;
+                        }
+                    }
+                    #payment__box{
+                        @include paragraph($color:$heading__color,$l__height:16px);
+                        border-radius: 5px;
+                        padding: 5px 10px;
+
+                        &.paid{
+                            background-color:rgba($delivered__color,0.2);
+                            color: $delivered__color;
+                            box-shadow: 0 0 2px 2px rgba($black__color,0.1);
+                        }
+                        &.unpaid{
+                            background-color:rgba($pending__color,0.2);
+                            color: $pending__color;
+                            box-shadow: 0 0 2px 2px rgba($black__color,0.1);
+                        }
+                        &.refund{
+                            background-color:rgba($cancelled__color,0.2);
+                            color: $cancelled__color;
+                            box-shadow: 0 0 2px 2px rgba($black__color,0.1);
+                        }
+                    }
+                    #delivery__box{
+                        @include paragraph($color:$heading__color,$l__height:16px);
+                        border-radius: 5px;
+                        padding: 5px 10px;
+
+                        &.delivered{
+                            background-color:rgba($delivered__color,0.2);
+                            color: $delivered__color;
+                            box-shadow: 0 0 2px 2px rgba($black__color,0.1);
+                        }
+                        &.pending{
+                            background-color:rgba($pending__color,0.2);
+                            color: $pending__color;
+                            box-shadow: 0 0 2px 2px rgba($black__color,0.1);
+                        }
+                        &.cancelled{
+                            background-color:rgba($cancelled__color,0.2);
+                            color: $cancelled__color;
+                            box-shadow: 0 0 2px 2px rgba($black__color,0.1);
+                        }
+                        &.returns{
+                            background-color:rgba($returns__color,0.2);
+                            color: $returns__color;
+                            box-shadow: 0 0 2px 2px rgba($black__color,0.1);
+                        }
+                        &.inprogress{
+                            background-color:rgba($progress__color,0.2);
+                            color: $progress__color;
+                            box-shadow: 0 0 2px 2px rgba($black__color,0.1);
+                        }
+                        &.pickups{
+                            background-color:rgba($pickups__color,0.2);
+                            color: $pickups__color;
+                            box-shadow: 0 0 2px 2px rgba($black__color,0.1);
+                        }
+                    }
+                    #action__box{
+                        @include display__flex($a__items:center,$j__content:center);
+                        gap:10px;
+                        a{
+                            @include icon__sm($width:36px,$height:36px,$b__radius:50%,$bg__color:transparent,$color:$teal__color,$b__color:$teal__color);
+                            &:hover{
+                                @include hover($color:$white__color,$bg__color:$teal__color);
+                                &.delete__btn{
+                                    background-color:$red__color;
+                                    border-color: $red__color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

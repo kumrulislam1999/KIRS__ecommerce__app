@@ -1,0 +1,13 @@
+#shop__details__page{
+    /* ======= Start Relative Product Details ======== */
+    #relative__product__section{
+        #relative__product__box{
+            h3{
+                text-align: center;
+                @include heading__3($margin: 0 0 25px);
+            }
+        }
+    }
+    /* ======= End Relative Product Details ======== */
+
+}

@@ -1,0 +1,20 @@
+#user__order__details__page{
+
+
+    /* ======= Start User Profile Section ======= */
+    #user__order__details__section{
+
+        #user__content__box{
+            height: 100%;
+            padding:30px 20px;
+            background-color: rgba($teal__color,0.1);
+            h4{
+                @include heading__4($margin:0 0 20px)
+            }
+        }
+
+
+    
+        
+    }
+}

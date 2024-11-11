@@ -1,0 +1,212 @@
+#checkout__page{
+    #returning__login__section{
+        #returning__content{
+            box-shadow: 0 0 2px 2px rgba($black__color,0.1);
+            #login__heading{
+                background-color: rgba($teal__color,0.1);
+                p{
+                    @include paragraph($color:$heading__color,$f__weight:500);
+                    @include display__flex($j__content:start,$a__items:center);
+                    padding: 10px 25px;
+                    gap: 10px;
+                    i{
+                        @include icon__xsm($f__size:25px,$color:$teal__color);
+                    }
+                    a{
+                        color:$heading__color;
+                        &:hover{
+                            @include hover($color:$teal__color);
+                        }
+                    }
+                }
+            }
+            #login__box{
+                padding: 20px;
+                .input__group{
+                    border: 1px solid $teal__color;
+                    margin: 12px;
+                    input{
+                        @include paragraph($padding:5px 20px,$color:$heading__color);
+                        height: 40px;
+                    }
+
+                    &.input__check{
+                        border-color: transparent;
+                        @include display__flex($a__items:center,$j__content:start);
+                        gap:10px;
+                    }
+                }
+                .login__btn{
+                    @include btn__lg($bg__color:transparent,$color:$teal__color,$b__color:$teal__color,$margin:10px 20px 20px );
+                    &:hover{
+                        @include hover($bg__color:$teal__color,$color:$white__color);
+                    }
+                }
+                .forget__btn{
+                    @include paragraph($color:$heading__color,$padding:0 12px 0);
+                    &:hover{
+                        @include hover($color:$teal__color);
+                    }
+                }
+
+            }
+
+            /* ========= Device Responsive Here ========== */
+            @include device__sm{
+                #login__box{
+                    padding: 10px 15px;
+                }
+            }
+            @include device__xsm{
+                #login__heading{
+                    p{
+                        padding: 10px;
+                    }
+                }
+                #login__box{
+                    padding: 15px 0;
+                }
+            }
+        }
+    }
+
+
+    #coupon__Apply__section{
+        #coupon__content{
+            box-shadow: 0 0 2px 2px rgba($black__color,0.1);
+        
+            #coupon__heading{
+                background-color: rgba($teal__color,0.1);
+                p{
+                    @include paragraph($color:$heading__color,$f__weight:500);
+                    @include display__flex($j__content:start,$a__items:center);
+                    padding: 10px 25px;
+                    gap: 10px;
+                    i{
+                        @include icon__xsm($f__size:25px,$color:$teal__color);
+                    }
+                    a{
+                        color:$heading__color;
+                        &:hover{
+                            @include hover($color:$teal__color);
+                        }
+                    }
+                }
+            }
+            #coupon__apply__box{
+                padding: 20px;
+                .input__group{
+                    border: 1px solid $teal__color;
+                    margin: 12px;
+                    input{
+                        @include paragraph($padding:5px 20px,$color:$heading__color);
+                        height: 40px;
+                    }
+                }
+                .apply__btn{
+                    @include btn__lg($bg__color:transparent,$color:$teal__color,$b__color:$teal__color,$margin:10px 20px 10px );
+                    &:hover{
+                        @include hover($bg__color:$teal__color,$color:$white__color);
+                    }
+                }
+
+            }
+
+
+            /* ========= Device Responsive Here ========== */
+            @include device__sm{
+                #coupon__apply__box{
+                    padding: 10px 15px;
+                }
+            }
+            @include device__xsm{
+                #coupon__heading{
+                    p{
+                        padding: 10px;
+                    }
+                }
+                #coupon__apply__box{
+                    padding: 10px 0 15px;
+                }
+            }
+        }
+    }
+
+    #checkout__section{
+        h3{
+            @include heading__3($color:$heading__color,$margin:0 0 20px);
+        }
+
+        h5{
+            @include heading__5($color:$teal__color,$margin:0 0 10px)
+        }
+
+
+        
+
+
+        #checkout__form__box{
+            #billing__address,#diffrent__address{
+                .input__group{
+                    margin: 12px;
+                    @include display__flex();
+                    flex-direction: column;
+                    label{
+                        @include paragraph($color:$heading__color,$margin:0 0 5px,$f__weight:500 );
+                    }
+                    input{
+                        @include paragraph($color:$heading__color,$padding:5px 20px);
+                        border: 1px solid $teal__color;
+                    }
+                    textarea{
+                        border: 1px solid $teal__color;
+                        height: 100px;
+                        resize: none;
+                    }
+                    &.check__account{
+                        display: inline-flex;
+                        flex-direction: row;
+                        gap: 10px;
+                        align-items: center;
+                        label{
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+
+            #checkout__total{
+                h5{
+                    @include heading__5($margin : 0 0 20px,);
+                }
+            }
+            #checkout__payment__method{
+                #accordion__box{
+                    margin-top: 36px;
+                    box-shadow: 0 0 3px 2px rgba($black__color,0.1);
+                    .accordion__btn{
+                        text-align: left;
+                        width: 100%;
+                        background-color: transparent;
+                        
+                        .input__box{
+                            @include display__flex($a__items:center,$j__content:start);
+                            width: 100%;
+                            gap: 10px;
+                            label{
+                                @include paragraph($color:$heading__color,$f__weight:600);
+                            }
+                        }
+                    }
+                }
+            }
+            .proceed__btn{
+                @include btn__lg($bg__color:transparent,$color:$teal__color,$b__color:$teal__color,$margin:35px 0 25px);
+                &:hover{
+                    @include hover($color:$white__color,$bg__color:$teal__color);
+                }
+            }
+            
+        }
+    }
+}

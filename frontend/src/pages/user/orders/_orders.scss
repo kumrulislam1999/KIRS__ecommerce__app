@@ -1,0 +1,41 @@
+#user__order__page{
+
+
+    /* ======= Start User Profile Section ======= */
+    #user__content__box{
+        height: 100%;
+        padding:30px 20px;
+        background-color: rgba($teal__color,0.1);
+        h4{
+            @include heading__4($margin:0 0 20px)
+        }
+
+
+        
+        #all__user__order__list{
+            margin-top: 20px;
+            // background-color: $white__color;
+            background-color: rgba($teal__color,0.01);
+            box-shadow:  0 0 3px 2px rgba($black__color,0.1);
+            padding:10px ;
+            #all__order__list{
+                padding: 10px 0 20px;
+                #all__order__list__box{
+                    h5{
+                        @include heading__5($margin:0 0 15px);
+                    }
+                }
+
+            }
+        }
+        /* ====== Start Device Responsive Here ====== */
+        @include device__xsm{
+            padding:30px 5px;
+            #all__order__list__section{
+                padding: 20px 5px;
+            }
+        }
+        /* ====== End Device Responsive Here ====== */
+        
+    }
+}

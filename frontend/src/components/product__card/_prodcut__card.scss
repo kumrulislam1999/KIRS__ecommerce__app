@@ -1,0 +1,125 @@
+#product__card{
+    background-color: $white__color;
+    margin: 12px;
+    box-shadow: 0 0 5px 5px rgba($black__color,0.1);
+    #card__box{
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        #img__box{
+            
+            img{
+                width: 100%;
+                transition: 0.4s;
+                &.img__hover{
+                    transform: scale(0);
+                    display: none;
+                }
+                &.img__normal{
+                    transform: scale(1);
+                    display: block;
+                }
+            }
+        }
+        #text__box{
+            padding: 15px 12px 20px;
+            text-align: center;
+            @include display__flex($a__items:center,$j__content:center);
+            flex-direction: column;
+            h6{
+                a{
+                    @include heading__6($color:$black__color,$f__weight:800);
+                    &:hover{
+                        @include hover($color:$teal__color)
+                    }
+                }
+            }
+            .price{
+                @include paragraph($f__weight:500);
+                padding-bottom: 5px;
+            }
+            
+            .description{
+                @include paragraph();
+            }
+            .detail__btn{
+                @include btn__sm($margin:20px 0 0,$bg__color:$white__color,$b__color:$teal__color,$color:$teal__color);
+                &:hover{
+                    @include hover($color:$white__color,$bg__color:$teal__color)
+                }
+            }
+        }
+
+        #action__box{
+            a{
+                position: absolute;
+                opacity: 0;
+                transition: 0.4s;
+                z-index: 20;
+                @include icon__lg($b__radius:50%,$color:$teal__color,$b__color:$teal__color,$bg__color:transparent);
+                &:hover{
+                    @include hover($bg__color:$teal__color,$color:$white__color);
+                }
+
+                &.cart__btn{
+                    top: 20px;
+                    right: -20px;
+                }
+                &.wishlist__btn{
+                    top: 70px;
+                    right: -20px;
+                    transition-delay: 0.1s;
+                }
+                &.view__btn{
+                    top: 120px;
+                    right: -20px;
+                    transition-delay: 0.2s;
+                }
+                &.compare__btn{
+                    top: 170px;
+                    right: -20px;
+                    transition-delay: 0.3s;
+                }
+            }
+        }
+        #badge__box{
+            @include paragraph($color:$white__color,$f__weight:500);
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            padding: 0px 10px;
+            border-radius: 0;
+            background-color: $teal__color;
+        }
+        &:hover{
+
+            #img__box{
+                .img__hover{
+                    transform: scale(1);
+                    display: block;
+                }
+                .img__normal{
+                    display: none;
+                    transform: scale(0);
+                }
+            }
+            #action__box{
+                a{
+                    opacity: 1;;
+                    &.cart__btn{
+                        right: 20px;
+                    }
+                    &.wishlist__btn{
+                        right: 20px;
+                    }
+                    &.view__btn{
+                        right: 20px;
+                    }
+                    &.compare__btn{
+                        right: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

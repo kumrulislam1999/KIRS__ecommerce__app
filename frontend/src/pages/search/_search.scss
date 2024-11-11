@@ -1,0 +1,24 @@
+#search__page{
+    #search__section{
+        #search__box{
+            border: 1px solid $teal__color;
+            @include display__flex($a__items:center,$j__content: space-between);
+            padding: 2px;
+            margin-bottom:30px ;
+            input{
+                @include paragraph($color:$heading__color,);
+                padding: 5px 25px;
+                height: 100%;
+                width: 100%;
+                height: 36px;
+                border-color: $teal__color;
+            }
+            .search__btn{
+                @include icon__sm($b__color:$teal__color,$width:36px,$height:36px,$color:$teal__color,$bg__color:$white__color,$f__weight:800,$f__size:25px);
+                &:hover{
+                    @include hover($bg__color:$teal__color,$color:$white__color);
+                }
+            }
+        }
+    }
+}

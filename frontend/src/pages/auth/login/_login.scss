@@ -1,0 +1,98 @@
+#login__section{
+    #login__box{
+        padding: 30px;
+        border-radius: 50px;
+        background-image:linear-gradient(90deg, rgba($green__color,1),rgba($teal__color,1));
+            
+        
+        
+        #login__form__box{
+            padding: 50px 30px;
+            border-radius: 50px;
+            background-image: linear-gradient(90deg,rgba($teal__color,0.5),rgba($green__color,0.5));
+            h4{
+                text-align: center;
+                @include heading__4($margin:0 0 30px,$color:$white__color);
+            }
+            .input__group{
+                @include display__flex;
+                border: 1px solid $white__color;
+                margin: 12px 0;
+                label{
+                    @include icon__sm($width:40px,$height:40px,$f__size:25px,$bg__color:$white__color,$color:$teal__color,);
+                }
+                input{
+                    @include paragraph($color:$white__color,$f__weight:500);
+                    padding: 5px 20px;
+                    height: 40px;
+                    width: 100%;
+                }
+            }
+
+            #btn__box{
+                @include display__flex($a__items:center,$j__content:space-between);
+                margin-top: 30px;
+                margin-bottom: 30px;
+                gap: 10px;
+                .login__btn,a{
+                    @include btn__lg($bg__color:transparent,$b__color:$white__color,$color:$white__color);
+                    &:hover{
+                        @include hover($color:$teal__color,$bg__color:$white__color);
+                    }
+                }
+            }
+            p{
+                text-align: center;
+                @include paragraph($color:$white__color,$l__height:20px);
+                a{
+                    padding:0 5px;
+                    border-radius: 10px;
+                    color: $white__color;
+                    &:hover{
+                        @include hover($color:$teal__color,$bg__color:$white__color);
+                    }
+                }
+            }
+
+        }
+
+        #content__box{
+            height: 100%;
+            text-align: center;
+            padding: 50px;
+            background-image: linear-gradient(90deg,rgba($teal__color,0.5),rgba($green__color,0.5));
+            border-radius: 50px;
+            h3{
+                @include heading__3($color:$white__color,$margin:0 0 25px);
+            }
+            h5{
+                @include heading__5($color:$white__color);
+            }
+            #social__medial{
+                margin-top: 25px;
+                @include display__flex($a__items:center,$j__content:center);
+                gap:10px;
+                a{
+                    @include icon__xsm($width:40px,$height:40px,$f__size:20px,$color:$white__color,$bg__color:transparent,$b__color:$white__color,$b__radius:50%);
+                    &:hover{
+                        @include hover($color:$teal__color,$bg__color:$white__color);
+                    }
+                }
+            }
+        }
+
+        /* ========= Device Responsive Here ========== */
+        
+        /* ======== Device Responsive Here ========= */
+        @include device__xsm{
+            padding: 5px;
+            #login__form__box{
+                padding: 20px 10px;
+            }
+            #content__box{
+                padding: 20px 10px;
+            }
+        }
+    }
+    
+}

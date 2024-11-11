@@ -1,0 +1,151 @@
+#admin__dashboard__menu{
+    height: 100%;
+    background-color: $teal__color;
+    padding: 10px;
+    #dashboard__box{
+        height: 100%;
+        #profile__box{
+            margin: 20px 5px 30px;
+            box-shadow: 0 0 3px 2px rgba($white__color,0.2);
+            padding: 10px;
+            #img__box{
+                position: relative;
+                @include display__flex($a__items:center,$j__content:center);
+            }
+            img{
+                width: 120px;
+                height: 120%;
+                margin: auto;
+                border: 3px solid $white__color;
+                border-radius: 50%;
+            }
+            #image__upload__box{
+                position: absolute;
+                bottom: -10px;
+                left: 50%;
+                transform: translate(-50%);
+                label{
+                    @include icon__lg($b__radius:50%,$color:$teal__color,$bg__color:$white__color);
+                }
+            }
+            #profile__info{
+                margin-top: 30px;
+                text-align: center;
+                h6{
+                    @include heading__5($color:$white__color,$f__weight:800);
+                }
+                .position{
+                    @include paragraph($color:$white__color,$f__weight:800,$f__size:18px,$margin:10px 0 5px)
+                }
+                .visiting{
+                    @include paragraph($color:$white__color);
+                }
+                .logout__btn{
+                    display: block;
+                    width: 100%;
+                    @include btn__sm($bg__color:transparent,$b__color:$white__color,$margin:20px 0 0);
+                    &:hover{
+                        @include hover($color:$teal__color,$bg__color:$white__color)
+                    }
+                }
+            }
+        }
+        #admin__menu__box{
+            margin: 20px 5px;
+            padding: 10px;
+            // border: 1px solid $white__color;
+            box-shadow: 0 0 3px 3px rgba($white__color,0.2);
+            .menu__item{
+                @include display__flex($a__items:center,$j__content:start);
+                border: 1px solid $white__color;
+                gap:5px;
+                &.dropdown__btn{
+                    width: 100%;
+                    margin: 0;
+                    padding: 0;
+                    &::after{
+                        margin-left: auto;
+                        margin-right: 20px;
+                        color: $white__color;
+                    }
+                }
+                i{
+                    position: relative;
+                    z-index: 1;
+                    @include icon__sm($height:36px,$width:36px,$bg__color:$white__color,$color:$teal__color);
+                    .extra__icon{
+                        position: absolute;
+                        top:-3px;
+                        right:-4px;
+                        z-index: 10;
+                        // rotate: -10deg;
+                        @include icon__sm($f__size:16px,$width:25px,$height:25px,$bg__color:transparent,$color:$teal__color);
+                        
+                    }
+                }
+                span{
+                    @include paragraph($color:$white__color,$padding:0 10px,$f__weight:500);
+                    height: 36px;
+                    line-height: 36px;
+                }
+
+                &:hover{
+                    background-color: $white__color;
+                    span{
+                        @include hover($color:$teal__color)
+                    }
+                    i{
+                        @include hover($color:$white__color,$bg__color:$teal__color);
+                        border-color: $teal__color;
+                        .extra__icon{
+                            color: $white__color;
+                        }
+                    }
+                    &.dropdown__btn{
+                        &::after{
+                            color: $teal__color;
+                        }
+                    }
+                }
+            }
+            #dorp__down{
+                margin-left: auto;
+                .drop__down__menu{
+                    background-color: $teal__color !important;
+                    width: 200px;
+                    text-align: right;
+                    margin-left: auto;
+                    padding: 15px;
+                    .drop__down__item{
+                        .menu__item{
+                            border: 1px solid $white__color;
+                            gap:5px;
+                            &.dropdown-btn{
+                                width: 100%;
+                                margin: 0;
+                                padding: 0;
+                                &::after{
+                                    margin-left: auto;
+                                    margin-right: 20px;
+                                    color: $white__color;
+                                }
+                            }
+                            span{
+                                @include paragraph($color:$white__color,$padding:0 10px,$f__weight:500);
+                                height: 36px;
+                                line-height: 36px;
+                            }
+            
+                            &:hover{
+                                background-color: $white__color;
+                                span{
+                                    @include hover($color:$teal__color)
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,44 @@
+#error2__page{
+    background-color: $teal__color;
+    #error__context__box{
+       text-align: center;
+            img{
+                width: 80%;
+                margin: auto;
+            }
+            #context__box{
+                h3{
+                    @include heading__3($color:$white__color);
+                }
+                p{@include paragraph($color:$white__color,$margin:15px 0)}
+                #subscribe__form{
+                    padding: 2px;
+                    border: 1px solid $white__color;
+                    .input__group{
+                        @include display__flex($a__items:center);
+                        border: 1px solid $white__color;
+                        padding: 3px;;
+                        input{
+                            width: 100%;
+                            @include paragraph($heading__color);
+                            padding: 10px 20px;
+                            border: 1px solid $white__color
+                        }
+                        .subscribe__btn{
+                            @include btn__xsm($padding:14px 25px,$b__color:transparent);
+                        }
+                    }
+                }
+                .back__btn{
+                    @include btn__lg($b__color:$white__color,$margin:15px 0 0,$bg__color:$teal__color);
+                    &:hover{
+                        @include hover($color:$teal__color,$bg__color:$white__color);
+                    }
+                }
+            }
+        /* ==========  Device Responsive   ========== */
+        @include device__sm{
+            img{width:100%;}
+        }
+    }
+}

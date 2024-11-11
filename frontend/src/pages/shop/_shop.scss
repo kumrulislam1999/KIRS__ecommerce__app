@@ -1,0 +1,63 @@
+
+#shop__section{
+    #filter__bar{
+        background-color: $teal__color;
+        padding: 10px 5px;
+        margin-bottom: 15px;
+        #result__box{
+            @include display__flex($a__items:center,$j__content:start);
+            gap: 20px;
+            background-color: transparent;
+            .btn__box{
+                @include display__flex($display:inline-flex,$a__items:center, $j__content:start);
+                gap:5px;
+                .toggle__btn{
+                    @include icon__xsm($width:40px,$height:40px,$f__size:25px,$bg__color:transparent,$b__color:$white__color);
+                    &:hover{
+                        @include hover($color:$teal__color,$bg__color:$white__color)
+                    }
+                }
+            }
+            p{
+                @include paragraph($color:$white__color,$f__weight:600);
+            }
+        }
+        #filter__box{
+            @include display__flex($j__content:end);
+            #filter{
+                background-color: $teal__color;
+                padding: 10px 20px;
+                border: 1px solid $white__color;
+                color:$white__color;
+                border-radius: 0px;
+            
+                &:hover{
+                    @include hover($color:$teal__color,$bg__color:$white__color);
+                }
+                
+                
+            }
+        }
+
+
+
+        /* ======== Responsive Devices Here ========== */
+        @include device__sm{
+            padding: 10px 20px;
+            #filter__box{
+                justify-content: start;
+            }
+            
+        }
+        @include device__xsm{
+            padding: 10px 10px;
+            #filter__box{
+                justify-content: start;
+            }
+            
+        }
+    }
+    
+
+    
+}

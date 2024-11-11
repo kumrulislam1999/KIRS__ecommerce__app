@@ -1,0 +1,118 @@
+#cart__page{
+    #cart__section{
+        h3{
+            @include heading__3($margin:0 0 25px);
+        }
+        #search__box{
+            border: 1px solid $teal__color;
+            @include display__flex($a__items:center,$j__content: space-between);
+            padding: 2px;
+            margin-bottom:30px ;
+            input{
+                @include paragraph($color:$heading__color,);
+                padding: 5px 25px;
+                height: 100%;
+                width: 100%;
+                height: 36px;
+                border-color: $teal__color;
+            }
+            .search__btn{
+                @include icon__sm($b__color:$teal__color,$width:36px,$height:36px,$color:$teal__color,$bg__color:$white__color,$f__weight:800,$f__size:25px);
+                &:hover{
+                    @include hover($bg__color:$teal__color,$color:$white__color);
+                }
+            }
+        }
+        #cart__total{
+            margin-top: 50px;
+            #cart__total__box{
+                box-shadow: 0 0 3px 2px rgba($black__color,0.1);
+                padding: 20px;
+                h5{
+                    @include heading__5($margin:0 0 20px);
+                }
+
+                .table__box{
+                    th{
+                        border: 1px solid rgba($black__color,0.2);
+                        padding: 10px;
+                        width: 50%;
+                        h6{
+                            @include heading__6($f__weight:500,$f__size:16px);
+                            &.total{
+                                font-weight: 600;
+                                color: $teal__color;
+                            }
+                        }
+                    }
+                    td{
+                        border: 1px solid rgba($black__color,0.2);
+                        padding: 10px;
+                        width: 50%;
+                        p{
+                            @include paragraph()
+                        }
+                        #shipping__info{
+                            .input__group{
+                                @include display__flex($a__items:center,$j__content:start);
+                                gap:5px;
+                                label{
+                                    @include paragraph($color:$heading__color);
+                                }
+                            }
+                            .change__address__btn{
+                                @include btn__xsm($margin:10px 0 0,$bg__color:transparent,$color:$heading__color);
+                                position: relative;
+                                transition: 0.4s;
+
+                                &::after{
+                                    @include after__before($width:0%,$height:2px,$bg__color:$teal__color,$left:0,$bottom:0);
+                                    transition: 0.4s;
+                                }
+                                &:hover{
+                                    @include hover($color:$teal__color);
+                                    &::after{
+                                        width: 100%;
+                                    }
+                                }
+                            }
+
+                        }
+                        .total__price{
+                            @include heading__6($color:$teal__color)
+                        }
+                        
+                    }
+                }
+                .procced__btn{
+                    @include btn__lg($margin: 30px 0 15px,$b__color:$teal__color,$bg__color:transparent,$color:$teal__color);
+                    &:hover{
+                        @include hover($color:$white__color,$bg__color:$teal__color);
+                    }
+                }
+            }
+
+
+            /* ======= Device Responsive Here ======== */
+            @include device__sm{
+                margin-top: 30px;
+            }
+            @include device__xsm{
+                margin-top: 30px;
+                #cart__total__box{
+                    padding: 5px;
+                    .table__box{
+                        th{
+                            width: 40%;
+                            padding: 10px 5px;
+                        }
+                        td{
+                            width: 60%;
+                            padding: 10px 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

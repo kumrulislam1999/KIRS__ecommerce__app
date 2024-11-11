@@ -1,0 +1,76 @@
+#all__orders__page{
+
+
+    /* ======= Start User Profile Section ======= */
+    #all__orders__section{
+        #all__orders__content__box{
+            height: 100%;
+            padding:30px 20px;
+            background-color: rgba($teal__color,0.1);
+            position: relative;
+            h4{
+                @include heading__4($margin:0 0 20px);
+            }
+            #order__overview__section{
+                padding: 20px 5px;
+                box-shadow: 0 0 2px 2px rgba($black__color,0.1);
+                h5{
+                    @include heading__5($margin:0 10px 20px)
+                }
+                #orders__overviews{
+                    #orders__overviews__box{
+                        .orders__overviews__item{
+                            @include display__flex($a__items:center,$j__content:space-between);
+                            gap:10px;
+                            margin: 12px;
+                            padding: 20px 10px;
+                            box-shadow: 0 0 1px 2px rgba($black__color,0.1);
+                            .overview__text__content{
+                                p{
+                                    @include paragraph__title($f__weight:800,$color:$heading__color);
+                                }
+                                h6{
+                                    @include heading__6($color:$paragraph__color,$f__weight:800);
+                                }
+                                .title{
+                                    @include heading__6($color:$teal__color,$f__weight:600,$margin:0 0 10px);
+                                }
+                            }
+                            .overviews__icon{
+                                @include icon__sm($width:50px,$height:50px,$f__size:35px,$bg__color:$teal__color,$color:$white__color,$b__radius:10px);
+                            }
+                            
+                        }
+                    }
+                }
+            }
+
+
+            #all__order__list__section{
+                margin-top: 50px;
+                // background-color: $white__color;
+                background-color: rgba($teal__color,0.01);
+                box-shadow:  0 0 3px 2px rgba($black__color,0.1);
+                padding:10px ;
+                #all__order__list{
+                    padding: 20px 0;
+                    #all__order__list__box{
+                        h5{
+                            @include heading__5($margin:0 0 15px);
+                        }
+                    }
+
+                }
+            }
+            /* ====== Start Device Responsive Here ====== */
+            @include device__xsm{
+                padding:30px 5px;
+                #all__order__list__section{
+                    padding: 20px 5px;
+                }
+            }
+            /* ====== End Device Responsive Here ====== */
+            
+        }
+    }
+}

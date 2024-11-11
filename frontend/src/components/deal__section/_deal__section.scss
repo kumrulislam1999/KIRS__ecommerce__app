@@ -1,0 +1,62 @@
+#deal__section{
+    #deal__bg{
+        @include bg__image($bg__repeat:no-repeat);
+        position: relative;
+        z-index: 1;
+        &::after{
+            @include after__before($width:10%,$height:100%,$bg__color:rgba($white__color,0.2),$position:absolute,$z__index:-1,$left:50%,$top:0);
+            transform-origin: center;
+            transition: 0s;
+            opacity: 0;
+            transition-delay: 0.4s;
+        }
+        &::before{
+            @include after__before($width:100%,$height:10%,$bg__color:rgba($white__color,0.2),$position:absolute,$z__index:-1,$left:0%,$top:50%);
+            transform-origin: center;
+            transition: 0s;
+            opacity: 0;
+        }
+        #text__box{
+            h6{
+                @include heading__6($f__weight:800);
+                &:hover{
+                    @include hover($color:$teal__color)
+                }
+            }
+            .price{
+                @include paragraph($f__weight:600,$color:$heading__color);
+                padding: 10px 0;
+                span{
+                    font-weight: 400;
+                }
+            }
+            .description{
+                @include paragraph();
+            }
+            .shop__btn{
+                @include btn__sm($margin: 20px 0 0,$bg__color:transparent,$color:$teal__color,$b__color:$teal__color);
+                &:hover{
+                    @include hover($color:$white__color,$bg__color:$teal__color);
+                }
+            }
+        }
+
+        
+        &:hover{
+            &::after{
+                width: 100%;
+                inset: 0;
+                transition: 0.4s;
+                opacity: 1;
+            }
+            &::before{
+                height: 100%;
+                inset: 0;
+                transition: 0.4s;
+                opacity: 1;
+            }
+        }
+        
+
+    }
+}

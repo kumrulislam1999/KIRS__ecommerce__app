@@ -1,0 +1,54 @@
+#getup__section{
+    #getup__bg{
+        @include bg__image();
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        &::after{
+            @include after__before($width:100%,$height:0%,$bg__color:rgba($white__color,0.1),$inset:0,$z__index:-1);
+            transform: rotate(90deg);
+            transition: 0s;
+            transform-origin:50%;
+        }
+        &:hover{
+            &::after{
+                transform: scale(1.5);
+                transition: 0.4s;
+                height: 100%;
+            }
+        }
+        .content__box{
+            h3{@include heading__3($color:$white__color)
+            }
+            p{
+                @include paragraph($color:$white__color,$padding:25px 0 25px);
+
+            }
+            .shop__btn{
+                @include btn__sm($bg__color:$white__color,$color:$teal__color,$b__color:$white__color);
+                &:hover{
+                    @include hover($color:$white__color,$bg__color:$teal__color);
+                    border-color: $teal__color;
+                    
+                }
+            }
+
+            /* ======== Devices Responsive  ========= */
+            @include device__md{
+                p{
+                    padding: 15px 0 25px;
+                }
+            }
+            @include device__sm{
+                p{
+                    padding: 15px 0 25px;
+                }
+            }
+            @include device__xsm{
+                p{
+                    padding: 15px 0 25px;
+                }
+            }
+        }
+    }
+}

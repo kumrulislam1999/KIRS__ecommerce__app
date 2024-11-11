@@ -1,0 +1,43 @@
+h1,h2,h3,h4,h5,h6,p,span,i,ul,ol{
+    margin: 0;
+    padding:  0;
+    box-sizing: border-box;
+}
+
+a,a:hover,span,i,option{
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+}
+ul,ol{
+    list-style: none;
+    margin: 0;
+    padding:0;}
+
+button,
+button:focus,
+input,
+input:focus,
+textarea,select,select:focus,
+textarea:focus,option,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,.btn,
+.accordion-button,accordion-button:focus,input:focus{
+    border: transparent;
+    outline: 0;
+    border-radius: 0px ;
+    background-color: transparent;
+}
+.select-form,select:focus{
+    border: 0;
+    border-radius: 0;
+    background-color: none;
+    outline: none;
+}
+img{
+    max-width: 100% !important;
+}
+option{
+    all:unset
+}

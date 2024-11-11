@@ -1,0 +1,40 @@
+#admin__create__category__page{
+
+
+    /* ======= Start User Profile Section ======= */
+    #create__category__section{
+        #category__content__box{
+            height: 100%;
+            padding:30px 20px;
+            background-color: rgba($teal__color,0.1);
+            position: relative;
+            h4{
+                @include heading__4($margin:0 0 20px);
+            }
+            
+
+
+            #category__list__section{
+                margin-top: 50px;
+                box-shadow: 0 0 2px 1px rgba($black__color,0.1);
+                padding: 15px;
+                h5{
+                    @include heading__5($color:$heading__color,$margin: 0 0 10px);
+                }
+            }
+
+            
+        }        
+    }
+}
+
+.modal__close{
+    @include display__flex($a__items:center,$j__content:center);
+    .modal__close__btn{
+        @include icon__sm($color:$teal__color,$bg__color:$white__color,$b__color:$teal__color,$b__radius:50%);
+        &:hover{
+            @include hover($bg__color:$teal__color,$color:$white__color);
+        }
+    }
+}
+

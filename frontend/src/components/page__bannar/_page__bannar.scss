@@ -1,0 +1,41 @@
+#pagebannar__section{
+    #pagebannar__bg{
+        @include bg__image;
+        z-index: 1;
+        position: relative;
+        &::after{
+            @include after__before($bg__color:rgba($teal__color,0.5),$width:100%,$height:100%,$inset:0,$z__index:-1);
+        }
+
+        #bannar__content{
+            text-align: center;
+            h2{
+                @include heading__2($color:$white__color,$margin:0 0 20px);
+            
+            /* ====== Device Responsive ====== */
+            @include device__sm{
+                margin-bottom: 15px;
+            }
+            @include device__xsm{
+                margin-bottom: 10px;
+            }
+            
+            }
+            #breadcrumb__box{
+                @include display__flex($j__content:center);
+                .breadcrumb__item{
+                    @include paragraph($color:$white__color);
+                    &::before{
+                        color: $white__color;
+                        padding: 0 5px;
+                    }
+                    &:hover{
+                        @include hover($color:$teal__color);
+                            
+                        
+                    }
+                }
+            }
+        }
+    }
+}
